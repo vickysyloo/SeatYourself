@@ -3,15 +3,15 @@
 one:
   name: MyString
   address: MyString
-  opening: 2016-04-14 14:57:01
-  closing: 2016-04-14 14:57:01
-  seats: 1
   phone: MyString
+  seats: 1
+  opening: 2016-04-14 15:04:29
+  closing: 2016-04-14 15:04:29
 
 two:
   name: MyString
   address: MyString
-  opening: 2016-04-14 14:57:01
-  closing: 2016-04-14 14:57:01
-  seats: 1
   phone: MyString
+  seats: 1
+  opening: 2016-04-14 15:04:29
+  closing: 2016-04-14 15:04:29
