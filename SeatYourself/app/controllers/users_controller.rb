@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to user_url
+      redirect_to user_url, notice: "Signed up!"
     else
       render 'new'
     end
@@ -19,6 +19,10 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    unless current_user == @user
+      flash[:notice] = "Wrong ID"
+      redirect_to root_url
+    end
   end
 
   def update
@@ -42,4 +46,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :phone, :email)
   end
+
 end
