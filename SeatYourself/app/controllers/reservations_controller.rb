@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+<<<<<<< HEAD
   before_action :load_restaurant
   before_action :ensure_logged_in
 
