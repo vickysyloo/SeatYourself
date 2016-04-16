@@ -1,11 +1,8 @@
 class Reservation < ActiveRecord::Base
-	validates :date, :time, :comment
+<<<<<<< HEAD
+	validates :date, :time, :comment, presence: true
 
 	validates :party_size, numericality: {only_integer: true}
-
-	validates :valid_date_range
-	validates :future_date_only
-	validates :availability
 
 	validates :valid_date_range
 	validates :future_date_only
@@ -27,5 +24,4 @@ class Reservation < ActiveRecord::Base
 				errors.add(:party_size,  "Sorry, there are no available bookings.")
 			end
 		end
-
 end
