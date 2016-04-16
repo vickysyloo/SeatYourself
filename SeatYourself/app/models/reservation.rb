@@ -22,7 +22,7 @@ class Reservation < ActiveRecord::Base
   end
 
   def availability
-    other_bookings = restaurant.reservations.where(time: time).sum(:party_size)
+    other_bookings = restaurant.reservations.where(time: @time).sum(:party_size)
 
     if (other_bookings + party_size) > restaurant.seats
       errors.add(:party_size,  "Sorry, there are no available bookings.")
