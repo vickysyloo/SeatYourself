@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-<<<<<<< HEAD
+
   before_action :load_restaurant
   before_action :ensure_logged_in
 
@@ -19,11 +19,13 @@ class ReservationsController < ApplicationController
     @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.user = current_user
 
-    if @reservation.save
-      redirect_to reservation_url, notice: "Reservation created successfully!"
-    else
-      render 'new'
-    end
+
+      if @reservation.save
+        redirect_to root_url, notice: "Reservation created successfully!"
+      else
+        render 'new'
+      end
+
   end
 
   def edit
@@ -34,7 +36,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
 
     if @reservation.update_attributes(reservation_params)
-      redirect_to reservation_url(@reservation)
+      redirect_to root_url
     else
       render 'edit'
     end
@@ -44,7 +46,7 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to reservations_url
+    redirect_to root_url
   end
 
   private

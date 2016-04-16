@@ -1,2 +1,8 @@
 <h1>Welcome to SeatYourself</h1>
-<p>Fake list of restaurants here!</p>
+<% @restaurants.each do |restaurant| %>
+<ul>
+  <li>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+  </li>
+</ul>
+<% end %>
