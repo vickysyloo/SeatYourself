@@ -11,37 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414202023) do
+ActiveRecord::Schema.define(version: 20160415201424) do
 
-  create_table "reservations", force: :cascade do |t|
-    t.date     "date"
-    t.time     "time"
-    t.integer  "party_size"
-    t.text     "comment"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "user_id"
-    t.integer  "restaurant_id"
-  end
+	create_table "reservations", force: :cascade do |t|
+		t.date     "date"
+		t.time     "time"
+		t.integer  "party_size"
+		t.text     "comment"
+		t.datetime "created_at",    null: false
+		t.datetime "updated_at",    null: false
+		t.integer  "user_id"
+		t.integer  "restaurant_id"
+	end
 
-  create_table "restaurants", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.time     "opening"
-    t.time     "closing"
-    t.integer  "seats"
-    t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+	create_table "restaurants", force: :cascade do |t|
+		t.string   "name"
+		t.string   "address"
+		t.time     "opening"
+		t.time     "closing"
+		t.integer  "seats"
+		t.string   "phone"
+		t.datetime "created_at", null: false
+		t.datetime "updated_at", null: false<h3>Reviews</h3>
 
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+	create_table "users", force: :cascade do |t|
+		t.string   "first_name"
+		t.string   "last_name"
+		t.string   "email"
+		t.string   "phone"
+		t.datetime "created_at",      null: false
+		t.datetime "updated_at",      null: false
+		t.string   "password_digest"
+	end
 
 end
