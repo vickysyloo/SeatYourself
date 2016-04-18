@@ -20,10 +20,21 @@ bob = User.create!(
 maman = Restaurant.create!(
 :name => "Maman",
 :address => "19191 King St",
-:phone => "9898",
+:phone => "1234567890",
 :seats => 100,
 :opening => "7:00:00",
-:closing => "21:00:00"
+:closing => "21:00:00",
+:url => "http://3.bp.blogspot.com/-Oz5XdPqGddQ/ULy9zwbIDXI/AAAAAAAAPio/HZwYtIr7DfE/s1600/22-restaurant-logo-design.jpg"
+)
+
+momofuku = Restaurant.create!(
+:name => "Momofuku",
+:address => "210 King St",
+:phone => "1234567890",
+:seats => 100,
+:opening => "8:00:00",
+:closing => "22:00:00",
+:url => "http://www.magazinehive.com/wp-content/uploads/2013/01/Good-Looking-Restaurant-Logos-Design-for-Inspiration.jpg"
 )
 
 Reservation.create!(

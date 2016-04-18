@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :first_name, :last_name, :email, :phone, :password, presence: true
 
   has_many :reservations
+  has_many :reviews
   has_many :restaurants, through: :reservations
 
 end
