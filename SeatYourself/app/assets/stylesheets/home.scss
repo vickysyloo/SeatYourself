@@ -1,0 +1,28 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.homepage-image {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+}
+
+
+button {
+	background-color: black;
+	border: 1px solid gray;
+	border-radius: 5px;
+	color: white;
+}
+
+.home-button{
+	text-decoration: none;
+	color: white;
+}
+
+.list-button:hover{
+	background-color: gray;
+	color:black;
+}

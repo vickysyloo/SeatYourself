@@ -1,13 +1,13 @@
-<h1>Welcome to SeatYourself</h1>
-
-<div class="homepage_image">
-<img src="http://www.agentofstyle.com/wp-content/uploads/sites/4/2014/06/sketch03.jpg">
+<div class="image-container">
+<img src='http://www.thecatat.com/wp-content/uploads/2013/06/restaurant-banner2.jpg'class="restaurant-image"/>
 </div>
 
+<div class="rest-list">
 <% @restaurants.each do |restaurant| %>
 <ul>
-  <li>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-  </li>
+	<li>
+		<%= link_to restaurant.name, restaurant_path(restaurant) %>
+	</li>
 </ul>
 <% end %>
+</div>

@@ -1,16 +1,11 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div.homepage_image{
-
-  width: auto;
-  height: 500px;
-  border-radius: 25px;
-
+.image-container {
+	align-items: center;
+	height: 400px;
 }
 
-.homepage_image {
-
-  align-items: center;
-
+.restaurant-image{
+	margin: auto;
 }

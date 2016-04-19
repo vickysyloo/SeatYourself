@@ -8,6 +8,10 @@
 #
 #
 
+User.destroy_all
+Restaurant.destroy_all
+Reservation.destroy_all
+
 bob = User.create!(
 :first_name => "Bob",
 :last_name => "Dude",
