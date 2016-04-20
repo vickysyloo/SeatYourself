@@ -15,19 +15,26 @@
   <% if flash[:alert] %>
     <p id="alert"><%= flash[:alert] %></p>
   <% end %>
-
+<nav>
+  <nav class="nav-bar">
     <p class="userinfo">
-      <% if current_user %>
-      Signed in as <%= link_to current_user.first_name, edit_user_path(current_user) %>.
-      <%= link_to "Main page", root_path %>
-      <%= link_to "Log out", session_path("current"), :method => :delete %>
-      <% else %>
-        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-      <% end %>
+      <ul>
+        <li class="username"><% if current_user %>
+        Signed in as <%= link_to current_user.first_name, edit_user_path(current_user) %>.</li>
+        <li class="main"><%= link_to "Main page", root_path %></li>
+        <li class="logs"><%= link_to "Log out", session_path("current"), :method => :delete %></li>
+        <% else %>
+          <li class="logs"><%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %></li>
+        <% end %>
+      </ul>
     </p>
-
+  </nav>
+</nav>
 
   <%= yield %>
 
 </body>
+<footer>
+<p class="footer-text">Copyright VCKEH 2016</p>
+</footer>
 </html>

@@ -4,14 +4,12 @@
 
 <% @restaurants.each do |restaurant| %>
 <ul>
+  <button>
   <li>
     <%= link_to restaurant.name, restaurant_path(restaurant) %>
   </li>
+  </button>
 </ul>
 <% end %>
-
-<button class="all-restaurants">
-  <%= link_to "All Restaurants", restaurants_path %>
-</button>
 
 </div>
