@@ -1,8 +1,6 @@
-<h1>Welcome to SeatYourself</h1>
+<div class="homepage">
 
-<div class="homepage_image">
-<!-- <img src="http://www.agentofstyle.com/wp-content/uploads/sites/4/2014/06/sketch03.jpg"> -->
-</div>
+<h1>Welcome to SeatYourself</h1>
 
 <% @restaurants.each do |restaurant| %>
 <ul>
@@ -11,3 +9,9 @@
   </li>
 </ul>
 <% end %>
+
+<button class="all-restaurants">
+  <%= link_to "All Restaurants", restaurants_path %>
+</button>
+
+</div>

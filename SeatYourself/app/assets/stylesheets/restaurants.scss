@@ -2,6 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
-  background: url(http://images.huffingtonpost.com/2014-06-12-SKETCH3.jpg) no-repeat center center fixed;
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+.homepage {
+  color: white;
+  background: url(http://static.standard.co.uk/s3fs-public/thumbnails/image/2014/06/19/12/Fera-at-Claridges_1.jpg);
+  background-size: cover;
+  position: relative;
+  height: 720px;
+}
+
+.homepage h1 {
+
+  border: solid 5px white;
+  background-color: rgba(106, 177, 143, 0.7);
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 460px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
