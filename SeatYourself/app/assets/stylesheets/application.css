@@ -14,7 +14,6 @@
  *= require_self
  */
 
-<<<<<<< HEAD
  *,
  *:after,
  *:before {
@@ -65,67 +64,15 @@ footer {
   background-color: #333;
   color: white;
   overflow: hidden;
-  height: 60px;
+  height: 40px;
   margin: 0;
   padding: 0 30px;
   font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
   float: right;
-=======
-html {
-	overflow: auto;
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
-}
-
-nav {
-	height: 100px;
-	align-items: center;
-}
-
-nav h1 {
-	float: left;
-	font-size: 38px;
-	font-weight: bold;
-}
-
-ul {
-	float: right;
-}
-
-li {
-	list-style-type: none;
-	display: inline;
-	margin: 10px;
-	line-height: 60px;
-}
-
-button {
-	height: 30px;
-	background-color: gray;
-	border: 1px solid gray;
-	border-radius: 3px;
-	padding: 0 10px;
-}
-
-.list-button {
-	text-decoration: none;
-	color: black;
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
-}
-
-.list-button:hover {
-	background-color: black;
-	color: white;
-}
-
-#alert {
-	background-color: red;
-	color: white;
->>>>>>> 9aa234795760239a532b0f5a2ecf1464b6ab519d
 }

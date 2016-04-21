@@ -1,7 +1,6 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-<<<<<<< HEAD
 
 *,
 *:after,
@@ -21,7 +20,7 @@ body {
   background: url(http://static.standard.co.uk/s3fs-public/thumbnails/image/2014/06/19/12/Fera-at-Claridges_1.jpg);
   background-size: cover;
   // position: relative;
-  height: 650px;
+  height: 800px;
 }
 
 .homepage h1 {
@@ -63,13 +62,8 @@ body {
   color: white;
   text-transform: uppercase;
   display: inline-block;
-=======
-.image-container {
-	align-items: center;
-	height: 400px;
 }
 
-.restaurant-image{
-	margin: auto;
->>>>>>> 9aa234795760239a532b0f5a2ecf1464b6ab519d
+.show-page img {
+  height: 300px;
 }

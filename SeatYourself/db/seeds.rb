@@ -8,14 +8,10 @@
 #
 #
 
-User.destroy_all
-Restaurant.destroy_all
-Reservation.destroy_all
-
 bob = User.create!(
 :first_name => "Bob",
 :last_name => "Dude",
-:email => "bbd@gmail.com",
+:email => "bdude@gmail.com",
 :phone => "909090",
 :password => "hi"
 )
