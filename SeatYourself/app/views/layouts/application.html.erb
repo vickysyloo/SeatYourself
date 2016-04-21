@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SeatYourself</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>SeatYourself</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-  <% if flash[:notice] %>
-    <p id="notice"><%= flash[:notice] %></p>
-  <% end %>
 
+<<<<<<< HEAD
   <% if flash[:alert] %>
     <p id="alert"><%= flash[:alert] %></p>
   <% end %>
@@ -32,6 +31,34 @@
 </nav>
 
   <%= yield %>
+=======
+	<nav>
+	<% if flash[:notice] %>
+		<p id="notice"><%= flash[:notice] %></p>
+	<% end %>
+
+	<% if flash[:alert] %>
+		<p id="alert"><%= flash[:alert] %></p>
+	<% end %>
+	<h1>Welcome to SeatYourself</h1>
+		<ul>
+			<% if current_user %>
+			Signed in as <%= link_to current_user.first_name, edit_user_path(current_user) %>.
+				<li><button><%= link_to "See All Restaurants!", restaurants_path, :class => "list-button"%></button></li>
+				<li><button><%= link_to "Main page", root_path, :class => "list-button"%></button></li>
+				<li><button><%= link_to "Log out", session_path("current"), :method => :delete, :class => "list-button" %></button></li>
+				<li><button><%= link_to "Home", root_path, :class => "list-button" %></button></li>
+			<% else %>
+				<li><button><%= link_to "See All Restaurants!", restaurants_path, :class => "list-button"%></button></li>
+				<li><button><%= link_to "Log in", new_session_path, :class => "list-button" %></button></li>
+				<li><button><%= link_to "Sign up", new_user_path, :class => "list-button" %></button></li>
+				<li><button><%= link_to "Home", root_path, :class => "list-button" %></button></li>
+			<% end %>
+		</ul>
+	</nav>
+
+	<%= yield %>
+>>>>>>> 9aa234795760239a532b0f5a2ecf1464b6ab519d
 
 </body>
 <footer>
