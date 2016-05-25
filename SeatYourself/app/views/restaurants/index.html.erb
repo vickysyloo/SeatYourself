@@ -1,17 +1,20 @@
-
 <div class="homepage">
+  <div class="main-title">
+    <h1>Welcome to SeatYourself</h1>
+  </div>
+  <div class="rest-list">
+    <% @restaurants.each do |restaurant| %>
+    <ul>
+      <button>
+        <li>
+          <%= link_to restaurant.name, restaurant_path(restaurant) %>
+        </li>
+      </button>
+    </ul>
+  <% end %>
+  </div>
 
-<h1>Welcome to SeatYourself</h1>
+  <div class="about-us">
 
-<div class="rest-list">
-<% @restaurants.each do |restaurant| %>
-<ul>
-  <button>
-  <li>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-  </li>
-  </button>
-</ul>
-<% end %>
-
+  </div>
 </div>

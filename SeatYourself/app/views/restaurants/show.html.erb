@@ -1,46 +1,44 @@
 <div class="show-page">
-<h1><%= @restaurant.name %></h1>
-<p><img src ="<%= @restaurant.url %>"></p>
-<p><%= link_to "Make a Reservation", new_restaurant_reservation_path(@restaurant) %></p>
-<br>
-<h2>Reviews</h2>
-<p>
-  <% @restaurant.reviews.each do |review| %>
-  <%= review.comment %>
+  <h1><%= @restaurant.name %></h1>
+    <p><img src ="<%= @restaurant.url %>"></p>
+    <p><%= link_to "Make a Reservation", new_restaurant_reservation_path(@restaurant) %></p>
   <br>
-  <% if review.user != nil %>
-    <em> by <%= review.user.first_name %></em>
-    Added on: <%= review.created_at %>
-  <% end %>
-</p>
-<% end %>
-
-  <% if current_user %>
-  <h4>New Review</h4>
-
-  <%= form_for([@restaurant, @review]) do |f| %>
-    <% if @review.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
-
-        <ul>
-        <% @review.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+  <h2>Reviews</h2>
+    <p>
+      <% @restaurant.reviews.each do |review| %>
+      <%= review.comment %>
+      <br>
+        <% if review.user != nil %>
+          <em> by <%= review.user.first_name %></em>
+          Added on: <%= review.created_at %>
         <% end %>
-        </ul>
+      <% end %>
+    </p>
+
+    <% if current_user %>
+      <h4>New Review</h4>
+      <%= form_for([@restaurant, @review]) do |f| %>
+        <% if @review.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+              <ul>
+              <% @review.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+          </div>
+        <% end %>
+
+      <div class="field">
+        <%= f.label :comment %><br />
+        <%= f.text_area :comment %>
       </div>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+      <% end %>
+    <% else %>
+      <p>Please <%= link_to "Log in", new_session_path %> to add a review.</p>
     <% end %>
-
-    <div class="field">
-      <%= f.label :comment %><br />
-      <%= f.text_area :comment %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-
-<% else %>
-  <p>Please <%= link_to "Log in", new_session_path %> to add a review.</p>
-<% end %>
 </div>
